@@ -1,0 +1,76 @@
+body {
+  background: linear-gradient(to right, #1BA39C, #9198e5);
+}
+
+.pagination {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  margin: auto;
+  text-align: center;
+}
+
+.dot {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #5ae4dd;
+  border-radius: 100px;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 4px;
+  transition: .3s;
+}
+
+.active {
+  background: #932e3e;
+}
+
+.dot:hover {
+  transition: .3s;
+  border-color: white;
+  background: #be4559;
+}
+
+.dot:hover:before {
+  top: -48px;
+  opacity: 1;
+}
+
+.dot:hover:after {
+  top: -16px;
+  opacity: 1;
+}
+
+.dot:before {
+  position: absolute;
+  top: -40px;
+  left: -28px;
+  background: white;
+  width: 80px;
+  font-family: "Montserrat";
+  font-size: 14px;
+  padding: 8px 0;
+  border-radius: 3px;
+  content: attr(data-tooltip);
+  opacity: 0;
+  transition: .3s;
+}
+
+.dot:after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -10px;
+  left: 4px;
+  border-top: 6px solid white;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid transparent;
+  content: "";
+  opacity: 0;
+  transition: .3s;
+}
